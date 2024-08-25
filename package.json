@@ -1,0 +1,25 @@
+{
+  "name": "pactum-js-cucumber-api",
+  "version": "1.0.0",
+  "description": "A JavaScript testing framework using Pactum for API testing and Cucumber for behavior-driven development.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --config config/cucumber.conf.js",
+    "report":"node ./config/cucumber-html-reporter.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "@cucumber/cucumber": "^8.4.0",
+    "pactum": "latest"
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^7.1.1"
+  }
+}

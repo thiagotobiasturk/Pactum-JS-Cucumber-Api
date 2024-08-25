@@ -1,0 +1,527 @@
+[
+  {
+    "description": "  In order to keep Regres api stable\n  As a tester\n  I want to make sure that everything works as expected",
+    "elements": [
+      {
+        "description": "",
+        "id": "regres;get-a-user",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Get A User",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1857499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 82700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I make a GET request to /api/users/1",
+            "match": {
+              "location": "src\\steps\\steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 776499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I receive a response",
+            "match": {
+              "location": "src\\steps\\steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116907699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I expect response should have a status 200",
+            "match": {
+              "location": "src\\steps\\steps.js:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 539999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I expect response to match a json snapshot user-1",
+            "match": {
+              "location": "src\\steps\\steps.js:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2369199
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"id\":1,\n  \"email\":\"george.bluth@reqres.in\",\n  \"first_name\":\"George\",\n  \"last_name\":\"Bluth\",\n  \"avatar\":\"https://reqres.in/img/faces/1-image.jpg\"\n}",
+                "line": 13
+              }
+            ],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I expect response should have a json at data",
+            "match": {
+              "location": "src\\steps\\steps.js:86"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1715400
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"data\": {\n    \"id\": 1,\n    \"first_name\": \"George\"\n  }\n}",
+                "line": 23
+              }
+            ],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I expect response should have a json like",
+            "match": {
+              "location": "src\\steps\\steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 698599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 160000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 314499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "regres;list-users",
+        "keyword": "Scenario",
+        "line": 32,
+        "name": "List Users",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 527500
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 54300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "I make a GET request to /api/users",
+            "match": {
+              "location": "src\\steps\\steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I set query param page to 2",
+            "match": {
+              "location": "src\\steps\\steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 210900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I receive a response",
+            "match": {
+              "location": "src\\steps\\steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22701800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I expect response should have a status 200",
+            "match": {
+              "location": "src\\steps\\steps.js:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"page\": 2\n}",
+                "line": 38
+              }
+            ],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I expect response should have a json like",
+            "match": {
+              "location": "src\\steps\\steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103299
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"page\": {\n      \"type\": \"number\"\n    }\n  }\n}",
+                "line": 44
+              }
+            ],
+            "keyword": "And ",
+            "line": 43,
+            "name": "I expect response should have a json schema",
+            "match": {
+              "location": "src\\steps\\steps.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13613300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "I store response at data[0].id as UserId",
+            "match": {
+              "location": "src\\steps\\steps.js:122"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1097700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 226900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "regres;get-a-user-with-id",
+        "keyword": "Scenario",
+        "line": 56,
+        "name": "Get A User With Id",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 466300
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 38500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 57,
+            "name": "I make a GET request to /api/users/{id}",
+            "match": {
+              "location": "src\\steps\\steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "I set path param id to $S{UserId}",
+            "match": {
+              "location": "src\\steps\\steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 59,
+            "name": "I receive a response",
+            "match": {
+              "location": "src\\steps\\steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17167900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 60,
+            "name": "I expect response should have a status 200",
+            "match": {
+              "location": "src\\steps\\steps.js:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 98799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 61,
+            "name": "I expect response header content-type should have application/json; charset=utf-8",
+            "match": {
+              "location": "src\\steps\\steps.js:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 388500
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"data\": {\n    \"id\": 7\n  }\n}",
+                "line": 63
+              }
+            ],
+            "keyword": "And ",
+            "line": 62,
+            "name": "I expect response should have a json like",
+            "match": {
+              "location": "src\\steps\\steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 128800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 37900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 227599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "regres;create-a-user",
+        "keyword": "Scenario",
+        "line": 71,
+        "name": "Create A User",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 314900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 30599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 72,
+            "name": "I make a POST request to /api/users",
+            "match": {
+              "location": "src\\steps\\steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 118400
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"name\": \"morpheus\",\n  \"job\": \"leader\"\n}",
+                "line": 74
+              }
+            ],
+            "keyword": "And ",
+            "line": 73,
+            "name": "I set body to",
+            "match": {
+              "location": "src\\steps\\steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 144800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 80,
+            "name": "I receive a response",
+            "match": {
+              "location": "src\\steps\\steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 558535599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 81,
+            "name": "I expect response should have a status 201",
+            "match": {
+              "location": "src\\steps\\steps.js:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 262799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 82,
+            "name": "I expect response time should be less than 3000 ms",
+            "match": {
+              "location": "src\\steps\\steps.js:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 242199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 21999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 330200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "regres",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Regres",
+    "tags": [],
+    "uri": "src\\features\\Regres.feature"
+  }
+]
