@@ -141,5 +141,6 @@ This step uploads the generated test report as an artifact named `test-report`. 
 ### Triggering the Workflow
 The workflow is manually triggered via the GitHub Actions UI. To start the workflow, navigate to the `Actions` tab in your GitHub repository, select the `CI` workflow, and click the `Run workflow` button.
 
-![image](https://github.com/user-attachments/assets/0d860a9c-8d9d-47f5-aee8-495da54ee678)
+![image](https://github.com/user-attachments/assets/8e5141d8-5fd1-4d55-86d1-af2e0d55c378)
 
+[Execute](https://github.com/thiagotobiasturk/Pactum-JS-Cucumber-Api/actions/workflows/qa_automation_api.yml)
