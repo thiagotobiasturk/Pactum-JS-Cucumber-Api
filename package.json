@@ -4,6 +4,7 @@
   "description": "A JavaScript testing framework using Pactum for API testing and Cucumber for behavior-driven development.",
   "main": "index.js",
   "scripts": {
+    "pretest": "node ./printFile.js",
     "test": "cucumber-js --config config/cucumber.conf.js",
     "report":"node ./config/cucumber-html-reporter.js "
   },
