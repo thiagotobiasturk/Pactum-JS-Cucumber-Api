@@ -1,7 +1,9 @@
 name: CI/CD
 
 on:
- workflow_dispatch: 
+ workflow_dispatch:
+ schedule:
+   - cron: "*/20 * * * *"
 
 jobs:
  qa-automation-api:
