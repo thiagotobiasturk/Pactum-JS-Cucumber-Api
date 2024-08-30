@@ -30,8 +30,8 @@ on:
           - '18'
           - '20'
           - '21'
-  schedule:
-    - cron: "*/20 * * * *"
+  # schedule:
+  #   - cron: "*/20 * * * *"
 
 jobs:
   qa-automation-api:
