@@ -14,51 +14,95 @@ The workflow configuration is as follows:
 name: CI/CD
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
+    inputs:
+      os:
+        description: 'Choose the OS for the workflow'
+        required: true
+        default: 'ubuntu-latest'
+        type: choice
+        options:
+          - 'ubuntu-latest'
+          - 'windows-latest'
+          - 'macOS-latest'
+      create_report:
+        description: 'Choose whether to create and upload the test report'
+        required: true
+        default: 'no'
+        type: choice
+        options:
+          - 'yes'
+          - 'no'
+      node_version:
+        description: 'Choose the Node.js version for the workflow'
+        required: true
+        default: '21'
+        type: choice
+        options:
+          - '15'
+          - '18'
+          - '20'
+          - '21'
 
 jobs:
-  build:
-    runs-on: ubuntu-latest 
+  qa-automation-api:
+    runs-on: ${{ github.event.inputs.os }} 
 
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2 
 
+    - name: Set up Node.js ${{ github.event.inputs.node_version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ github.event.inputs.node_version }}
+
     - name: Install dependencies
       run: |
-        npm install 
+        npm i 
 
     - name: Run tests
       run: |
         npm test  
 
-    - name: Generate test report
+    - name: Run report
+      if: ${{ github.event.inputs.create_report == 'yes' }}
       run: |
         npm run report  
 
     - name: Upload test report
+      if: ${{ github.event.inputs.create_report == 'yes' }}
       uses: actions/upload-artifact@v4
       with:
         name: test-report
-        path: |
-            ./reports/cucumber_report.json
-            ./reports/cucumber_report.html
+        path: | 
+          ./reports/cucumber_report.json
+          ./reports/cucumber_report.html
 
 ```
 
 ### Workflow Steps Explained
 1. Checkout Repository:
 ```yml
-- name: Checkout repo
-  uses: actions/checkout@v2
+ - name: Checkout repo
+   uses: actions/checkout@v2 
 ```
 This step checks out the repository code to the runner, making it available for subsequent steps.
 
+2. Set Up Node.js:
+```yml
+  
+- name: Set up Node.js ${{ github.event.inputs.node_version }}
+  uses: actions/setup-node@v3
+  with:
+    node-version: ${{ github.event.inputs.node_version }}
+```
+   
 2. Install Dependencies:
 ```yml
-- name: Install dependencies
-  run: |
-    npm install
+ - name: Install dependencies
+   run: |
+      npm i 
 ```
 This step installs all the dependencies required for the project using npm install.
 
@@ -72,21 +116,23 @@ This step runs the tests defined in the project using npm test.
 
 4. Generate Test Report:
 ```yml
-- name: Generate test report
+- name: Run report
+  if: ${{ github.event.inputs.create_report == 'yes' }}
   run: |
-    npm run report
+     npm run report  
 ```
 This step generates a test report after the tests have been executed using npm run report.
 
 5. Upload Test Report:
 ```yml
 - name: Upload test report
+  if: ${{ github.event.inputs.create_report == 'yes' }}
   uses: actions/upload-artifact@v4
   with:
     name: test-report
-    path: |
-        ./reports/cucumber_report.json
-        ./reports/cucumber_report.html
+    path: | 
+      ./reports/cucumber_report.json
+      ./reports/cucumber_report.html
 
 ```
 
