@@ -17,15 +17,15 @@ Before you start, make sure you have the following requirements:
 
 ## Installation 🖥️
 
-To start using the `qa-automation-api` framework, follow these steps:
+To start using the `Pactum-JS-Cucumber-Api` framework, follow these steps:
 
 ### 1. Clone the Repository
 
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/qa-automation-api.git
-cd qa-automation-api
+git clone https://github.com/your-username/Pactum-JS-Cucumber-Api.git
+cd Pactum-JS-Cucumber-Api
 ```
 ### 2. Install Dependencies
 ```bash
