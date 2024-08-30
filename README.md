@@ -3,7 +3,7 @@
 ![download (2)](https://github.com/user-attachments/assets/b7436c51-bdbe-4d3a-83d7-75e6b371e1aa)
 
 
-`qa-automation-api` framework integrates Pactum, Cucumber, and JavaScript for efficient and reliable testing. Pactum simplifies API interaction definition and validation, while Cucumber enables clear, BDD-style test scenarios for better team collaboration. JavaScript drives the test execution with flexibility. Additionally, the framework includes a reporting layer to provide detailed insights and summaries of test results, ensuring comprehensive visibility into testing outcomes.
+`Pactum-JS-Cucumber-Api` framework integrates Pactum, Cucumber, and JavaScript for efficient and reliable testing. Pactum simplifies API interaction definition and validation, while Cucumber enables clear, BDD-style test scenarios for better team collaboration. JavaScript drives the test execution with flexibility. Additionally, the framework includes a reporting layer to provide detailed insights and summaries of test results, ensuring comprehensive visibility into testing outcomes.
 
 [Actions-CI/CD](ACTIONS.md)
 
