@@ -3,7 +3,7 @@
 ![download (2)](https://github.com/user-attachments/assets/b7436c51-bdbe-4d3a-83d7-75e6b371e1aa)
 
 
-`qa-automation-api` framework integrates Pactum, Cucumber, and JavaScript for efficient and reliable testing. Pactum simplifies API interaction definition and validation, while Cucumber enables clear, BDD-style test scenarios for better team collaboration. JavaScript drives the test execution with flexibility. Additionally, the framework includes a reporting layer to provide detailed insights and summaries of test results, ensuring comprehensive visibility into testing outcomes.
+`Pactum-JS-Cucumber-Api` framework integrates Pactum, Cucumber, and JavaScript for efficient and reliable testing. Pactum simplifies API interaction definition and validation, while Cucumber enables clear, BDD-style test scenarios for better team collaboration. JavaScript drives the test execution with flexibility. Additionally, the framework includes a reporting layer to provide detailed insights and summaries of test results, ensuring comprehensive visibility into testing outcomes.
 
 [Actions-CI/CD](ACTIONS.md)
 
@@ -17,15 +17,15 @@ Before you start, make sure you have the following requirements:
 
 ## Installation 🖥️
 
-To start using the `qa-automation-api` framework, follow these steps:
+To start using the `Pactum-JS-Cucumber-Api` framework, follow these steps:
 
 ### 1. Clone the Repository
 
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/qa-automation-api.git
-cd qa-automation-api
+git clone https://github.com/your-username/Pactum-JS-Cucumber-Api.git
+cd Pactum-JS-Cucumber-Api
 ```
 ### 2. Install Dependencies
 ```bash
