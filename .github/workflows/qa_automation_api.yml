@@ -61,6 +61,8 @@ jobs:
 
     - name: Deploy report to GitHub Pages
       if: ${{ github.event.inputs.create_report == 'yes' }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
@@ -69,7 +71,7 @@ jobs:
         cp -r ./reports/* .
         git add .
         git commit -m 'Deploy test report to GitHub Pages'
-        git push -f origin gh-pages
+        git push -f "https://${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" gh-pages
 
     - name: Create URL file
       if: ${{ github.event.inputs.create_report == 'yes' }}
