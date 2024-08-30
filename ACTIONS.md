@@ -1,10 +1,15 @@
 # Continuous Integration (CI/CD) with GitHub Actions
 
+![image](https://github.com/user-attachments/assets/d8e81838-f2ad-4f5b-aa21-1b7aa015d135)
+
+
 This repository uses GitHub Actions to automate the Continuous Integration (CI/CD) process. This includes checking out the repository, installing dependencies, running tests, generating reports, and uploading the test reports.
 
 ## GitHub Actions Workflow
 
 The workflow file is located at `.github/workflows/qa-automation-api.yml` and is configured to run on every manual trigger using the `workflow_dispatch` event.
+
+![image](https://github.com/user-attachments/assets/a4edc497-8d36-4839-b477-c42009fda302)
 
 ### Workflow Configuration
 
