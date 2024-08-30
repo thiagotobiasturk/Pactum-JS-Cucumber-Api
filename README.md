@@ -1,4 +1,8 @@
 # Pactum-JS-Cucumber-Api
+
+![download (2)](https://github.com/user-attachments/assets/b7436c51-bdbe-4d3a-83d7-75e6b371e1aa)
+
+
 `qa-automation-api` framework integrates Pactum, Cucumber, and JavaScript for efficient and reliable testing. Pactum simplifies API interaction definition and validation, while Cucumber enables clear, BDD-style test scenarios for better team collaboration. JavaScript drives the test execution with flexibility. Additionally, the framework includes a reporting layer to provide detailed insights and summaries of test results, ensuring comprehensive visibility into testing outcomes.
 
 [Actions-CI/CD](ACTIONS.md)
@@ -495,6 +499,13 @@ After running your tests with Cucumber, you can generate an HTML report to visua
 
 ### Command to Generate the Report
 
+![image](https://github.com/user-attachments/assets/f38a4ffd-f0ed-41b8-aebf-3ae1d851998a)
+
+![image](https://github.com/user-attachments/assets/6119cf9f-0f47-4ac3-8f51-e97e9ea6c2e0)
+
+![image](https://github.com/user-attachments/assets/764174ff-9eb2-40c2-bc34-c535ab390e61)
+
+
 To generate the HTML report, use the following command:
 
 
@@ -502,10 +513,10 @@ To generate the HTML report, use the following command:
 npm run report
 ```
 
-![image](https://github.com/user-attachments/assets/904b3591-b725-4c49-87f7-c0f229a1980b)
 
-![image](https://github.com/user-attachments/assets/2259608c-ea35-43f8-90b5-c00922d7bfbc)
+[test-report.zip](https://github.com/user-attachments/files/16811374/test-report.1.zip) 🗂️
 
+# Author 🛠️
+Thiago Tobias Turk
 
-[test-report.zip](https://github.com/user-attachments/files/16620477/test-report.2.zip) 🗂️
-
+www.linkedin.com/in/thiago-tobias-turk-4462542a9

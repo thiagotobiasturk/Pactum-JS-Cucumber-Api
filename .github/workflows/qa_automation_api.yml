@@ -1,15 +1,50 @@
 name: CI/CD
 
 on:
- workflow_dispatch: 
+  workflow_dispatch:
+    inputs:
+      os:
+        description: 'Choose the OS for the workflow'
+        required: true
+        default: 'ubuntu-latest'
+        type: choice
+        options:
+          - 'ubuntu-latest'
+          - 'windows-latest'
+          - 'macOS-latest'
+      create_report:
+        description: 'Choose whether to create and upload the test report'
+        required: true
+        default: 'no'
+        type: choice
+        options:
+          - 'yes'
+          - 'no'
+      node_version:
+        description: 'Choose the Node.js version for the workflow'
+        required: true
+        default: '21'
+        type: choice
+        options:
+          - '15'
+          - '18'
+          - '20'
+          - '21'
+  schedule:
+    - cron: "*/20 * * * *"
 
 jobs:
- qa-automation-api:
-    runs-on: ubuntu-latest 
+  qa-automation-api:
+    runs-on: ${{ github.event.inputs.os }} 
 
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2 
+
+    - name: Set up Node.js ${{ github.event.inputs.node_version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ github.event.inputs.node_version }}
 
     - name: Install dependencies
       run: |
@@ -19,14 +54,16 @@ jobs:
       run: |
         npm test  
 
-    - name: Run tests
+    - name: Run report
+      if: ${{ github.event.inputs.create_report == 'yes' }}
       run: |
         npm run report  
 
     - name: Upload test report
+      if: ${{ github.event.inputs.create_report == 'yes' }}
       uses: actions/upload-artifact@v4
       with:
         name: test-report
         path: | 
-             ./reports/cucumber_report.json
-             ./reports/cucumber_report.html
+          ./reports/cucumber_report.json
+          ./reports/cucumber_report.html
