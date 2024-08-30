@@ -15,7 +15,7 @@ on:
       create_report:
         description: 'Choose whether to create and upload the test report'
         required: true
-        default: 'yes'
+        default: 'no'
         type: choice
         options:
           - 'yes'
@@ -59,11 +59,26 @@ jobs:
       run: |
         npm run report  
 
-    - name: Upload test report
+    - name: Deploy report to GitHub Pages
+      if: ${{ github.event.inputs.create_report == 'yes' }}
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git checkout --orphan gh-pages
+        git reset
+        cp -r ./reports/* .
+        git add .
+        git commit -m 'Deploy test report to GitHub Pages'
+        git push -f origin gh-pages
+
+    - name: Create URL file
+      if: ${{ github.event.inputs.create_report == 'yes' }}
+      run: |
+        echo "https://${{ github.repository_owner }}.github.io/${{ github.repository }}/" > report_url.txt
+
+    - name: Upload URL as artifact
       if: ${{ github.event.inputs.create_report == 'yes' }}
       uses: actions/upload-artifact@v4
       with:
-        name: test-report
-        path: | 
-          ./reports/cucumber_report.json
-          ./reports/cucumber_report.html
+        name: report-url
+        path: report_url.txt
