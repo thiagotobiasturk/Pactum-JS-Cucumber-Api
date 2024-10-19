@@ -9,14 +9,14 @@
 
 ## Tools and Technologies Used
 <div align="center">  
-  <a href="https://www.typescriptlang.org/" target="_blank"><img style="margin: 2px" src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" height="75" /></a>  
-  <a href="https://www.javascript.com/" target="_blank"><img style="margin: 2px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="75" /></a>  
+    <a href="https://www.javascript.com/" target="_blank"><img style="margin: 2px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="75" /></a>  
   <a href="https://github.com/" target="_blank"><img style="margin: 2px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="75" /></a>  
     <a href="https://pactumjs.github.io/" target="_blank"><img style="margin: 10px" src="https://github.com/user-attachments/assets/483988a1-c19c-4c4e-a3ff-aab2a68eae47" alt="PactumJs" height="75" /></a>
   <a href="https://cucumber.io/" target="_blank"><img style="margin: 2px" src="https://github.com/user-attachments/assets/4f94ac41-9d86-453d-9ed8-8a416a4f38a8" height="75" /></a>
   <a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="100" /></a> 
  <a href="https://github.com/" target="_blank"><img style="margin: 2px" src="https://github.com/user-attachments/assets/49766327-ba26-4422-83c0-93d3c9199f29" height="75" /></a>
   <a href="https://code.visualstudio.com/" target="_blank"><img style="margin: 2px" src="https://github.com/user-attachments/assets/07a14efd-dcec-475d-9a56-d1ba1c726857" height="75" /></a>
+  <a href="https://www.postman.com/" target="_blank"><img style="margin: 2px" src="https://github.com/user-attachments/assets/0e62108d-9812-4507-bd09-713fe27692d6" height="75" /></a>
 </div>  
 
 ## Requirements🧾 
